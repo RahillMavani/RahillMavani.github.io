@@ -1,50 +1,34 @@
-const canvas = document.getElementById('starfield');
-const ctx = canvas.getContext('2d');
+// --- SCROLL REVEAL ANIMATIONS ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Reveal elements on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
 
-let width, height, stars = [];
-const COUNT = 150; // Number of stars
-const SPEED = 0.5; // Star speed
-
-function init() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    stars = [];
-    for (let i = 0; i < COUNT; i++) {
-        stars.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            size: Math.random() * 2,
-            opacity: Math.random()
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Stop observing once it's visible so the animation only happens once
+                observer.unobserve(entry.target);
+            }
         });
-    }
-}
+    }, observerOptions);
 
-function draw() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = 'white';
+    const revealElements = document.querySelectorAll('.reveal-up');
+    revealElements.forEach(el => observer.observe(el));
 
-    stars.forEach(star => {
-        ctx.globalAlpha = star.opacity;
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Move star upward
-        star.y -= SPEED;
-
-        // Reset star to bottom if it leaves the screen
-        if (star.y < 0) {
-            star.y = height;
-            star.x = Math.random() * width;
+    // Optional: Add a subtle blur effect to the nav on scroll
+    const nav = document.querySelector('.glass-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(10, 10, 15, 0.8)';
+            nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+        } else {
+            nav.style.background = 'rgba(10, 10, 15, 0.6)';
+            nav.style.boxShadow = 'none';
         }
     });
-
-    requestAnimationFrame(draw);
-}
-
-window.addEventListener('resize', init);
-init();
-draw();
+});

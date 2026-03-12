@@ -1,52 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahil Mavani | Portfolio</title>
+    <title>Rahil Mavani | Game Technologist</title>
+    <!-- Professional Typography: Inter for a clean, highly readable layout -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <canvas id="starfield"></canvas>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Rahil Mavani</a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+            </nav>
+            <a href="#contact" class="btn btn-primary btn-sm nav-contact">Contact</a>
+        </div>
+    </header>
 
-    <nav>
-        <div class="logo">RAHIL MAVANI</div>
-        <div class="nav-links">
-            <a href="index.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="mailto:rahilmavani001@gmail.com">Contact</a>
-        </div>
-        <div class="socials">
-            <a href="https://www.youtube.com/@xGhostx001" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/in/rahil-mavani/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </nav>
+    <main>
+        <!-- Hero / About Section -->
+        <section class="hero" id="about">
+            <div class="container hero-container">
+                <div class="hero-content reveal-up">
+                    <span class="greeting">Hi, I'm</span>
+                    <h1 class="name">Rahil Mavani.</h1>
+                    <h2 class="title">Game Technologist & Technical Artist.</h2>
 
-    <main class="hero" id="about">
-        <div class="profile-container">
-            <img src="your-image.jpeg" alt="Rahil Mavani" class="profile-pic">
-        </div>
-        <div class="content">
-            <h1>Game Technologist & Artist</h1>
-            <p class="subtitle">BSc Computer Games Technology Student @ BCU | <span class="highlight">Predicted 1st</span> </p>
-            
-            <div class="stats-box">
-                <div class="stat"><span>3D Programming:</span> <span class="val">95%</span></div>
-                <div class="stat"><span>Asset Pipeline:</span> <span class="val">85%</span> </div>
-                <div class="stat"><span>2D Programming:</span> <span class="val">88%</span> </div>
-                <div class="stat"><span>3D Modelling:</span> <span class="val">70%</span> </div>
+                    <div class="about-text">
+                        <p>
+                            I specialize in bridging the gap between high-performance engineering and efficient asset
+                            pipelines. With extensive experience in <strong>Unreal Engine, Unity, and custom C++
+                                architectures</strong>, I construct robust, scalable, and immersive interactive
+                            experiences.
+                        </p>
+                        <p>
+                            To consistently deliver high-quality results ahead of schedule, I actively leverage
+                            <strong>AI tools and workflows</strong>. Whether it's to accelerate code generation,
+                            optimize asset pipelines, or rapidly prototype complex logic, integrating AI allows me to
+                            focus on solving hard architectural problems and refining the user experience.
+                        </p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#skills" class="btn btn-outline">Technical Skills</a>
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/rahil-mavani/" target="_blank" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/RahillMavani" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.youtube.com/@xGhostx001" target="_blank" aria-label="YouTube"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <p class="bio">
-                Specializing in bridging the gap between high-performance code and 3D art. 
-                Expertise in Unreal Engine, Unity, and Maya.
-            </p>
-            
-            <div class="cta">
-                <a href="projects.html" class="btn">View My Work</a>
+        <!-- Skills Section -->
+        <section class="skills-section bg-light" id="skills">
+            <div class="container reveal-up">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-desc">A comprehensive overview of the tools, languages, and methodologies I use to
+                        bring projects to life.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Programming & Scripting</h3>
+                        <ul class="skill-list">
+                            <li>C++ / C#</li>
+                            <li>HLSL / Shader Programming</li>
+                            <li>JavaScript / Node.js / TypeScript</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3>Engines & Frameworks</h3>
+                        <ul class="skill-list">
+                            <li>Unreal Engine 5 (C++ & Blueprints)</li>
+                            <li>Unity</li>
+                            <li>Three.js</li>
+                            <li>Custom ECS Architectures</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Core Competencies</h3>
+                        <ul class="skill-list">
+                            <li>AI-Assisted Development Workflows</li>
+                            <li>Asset Pipeline Optimization</li>
+                            <li>Performance Profiling & Memory Management</li>
+                            <li>Systems Architecture & AI Behavior Trees</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-desc">A selection of my recent work demonstrating architectural design,
+                        performance optimization, and gameplay programming.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal-up">
+                        <div class="card-image-container">
+                            <div class="card-image" style="background-image: url('astro_smash.jpg');"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tech-stack">Three.js • Node.js • MySQL</div>
+                            <h3 class="project-title">Astro Smash</h3>
+                            <p class="project-desc">
+                                A full-stack 3D shooter utilizing Three.js for vector-based physics and real-time
+                                rendering. Backend architecture secured by Node.js and BcryptJs for player state
+                                management.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/RahillMavani/Astro-Smash-3D" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-github"></i> Repository</a>
+                                <a href="https://www.youtube.com/watch?v=n-xMuT43h-0" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-youtube"></i> Video Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="card-image-container">
+                            <div class="card-image" style="background-image: url('shade_power.png');"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tech-stack">C++ • SDL2 • Custom ECS</div>
+                            <h3 class="project-title">Shade Power</h3>
+                            <p class="project-desc">
+                                A 2D engine runtime and shooter built entirely from scratch in C++. Powered by a
+                                custom-built Entity Component System (ECS) ensuring highly performant and cache-friendly
+                                data management.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/RahillMavani/Shade_Power" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-github"></i> Repository</a>
+                                <a href="https://www.youtube.com/watch?v=2GYfDKOkVBg" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-youtube"></i> Video Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-image-container">
+                            <div class="card-image" style="background-image: url('remnant_city.jpg');"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tech-stack">Unreal Engine 5 • Blueprints • HLSL</div>
+                            <h3 class="project-title">Remnant City</h3>
+                            <p class="project-desc">
+                                A comprehensive survival loop showcasing advanced mechanics in UE5. Features complex
+                                behavior tree AI, custom HLSL shader materials, and a robust asynchronous saving
+                                architecture.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://xghostiex.itch.io/remnant-city" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-itch-io"></i> Play Game</a>
+                                <a href="https://www.youtube.com/watch?v=9QrJcD0D_cg" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-youtube"></i> Video Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card reveal-up" style="transition-delay: 0.3s;">
+                        <div class="card-image-container">
+                            <div class="card-image" style="background-image: url('dead_zone.jpg');"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="tech-stack">Unity • C#</div>
+                            <h3 class="project-title">Dead Zone</h3>
+                            <p class="project-desc">
+                                A top-down survival game engineered in C# for high performance. Implements an
+                                intelligent AI navigation and pathing system coupled with an optimized asset streaming
+                                pipeline.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://xghostiex.itch.io/dead-zone-your-fate-awaits" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-itch-io"></i> Play Game</a>
+                                <a href="https://www.youtube.com/watch?v=hVNbNgAEKuw" target="_blank"
+                                    class="link-with-icon"><i class="fab fa-youtube"></i> Video Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Footer -->
+        <footer class="footer bg-dark" id="contact">
+            <div class="container">
+                <div class="footer-cta">
+                    <h2>Interested in collaborating?</h2>
+                    <p>I'm always open to discussing technical challenges, new opportunities, and potential projects.
+                    </p>
+                    <span class="btn btn-primary"
+                        style="user-select: all; cursor: text;">rahilmavani001@gmail.com</span>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Rahil Mavani. All rights reserved.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/rahil-mavani/" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/RahillMavani" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="script.js"></script>
